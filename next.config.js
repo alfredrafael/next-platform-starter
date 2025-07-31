@@ -1,6 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true
+module.exports = {
+    async redirects() {
+        return [
+            {
+                source: '/', // incoming request
+                destination: 'https://uqr.to/rootedandready',
+                permanent: false // 307 Temporary Redirect
+            }
+        ];
+    }
 };
-
-module.exports = nextConfig;
